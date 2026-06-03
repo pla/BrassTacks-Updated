@@ -1,5 +1,6 @@
 local parts = require("variable-parts")
 local tf = require("techfuncs")
+local rm = require("recipe-modify")
 
 local yield = 1
 local cost = 1
@@ -562,6 +563,11 @@ if mods["Krastorio2"] then
     needs_stabilizer = true,
     unlocked_by = "kr-matter-zinc-processing"
   })
+    if mods["space-exploration"] then
+        rm.AddIngredient("kr-matter-to-zinc-ore", "se-kr-charged-basic-stabilizer", 1)
+        rm.AddProductRaw("kr-matter-to-zinc-ore", { type = "item", name = "se-kr-charged-basic-stabilizer", amount = 1, probability = 0.199 })
+        rm.AddProductRaw("kr-matter-to-zinc-ore", { type = "item", name = "se-kr-basic-stabilizer", amount = 1, probability = 0.8 })
+    end
 end
 
 if mods["space-exploration"] then
