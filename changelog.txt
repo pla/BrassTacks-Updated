@@ -1,7 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.20
-Date: ????
+Date: 2026-06-03
   Changes:
+    - Removed hr textures on prototypes (Simon Brodtmann)
+    - Fixed missing locale (Simon Brodtmann)
+    - Added matter stabilizers to zinc ore (Morganite)
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.19
 Date: 2026-03-15
