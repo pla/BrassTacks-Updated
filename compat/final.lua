@@ -49,9 +49,9 @@ if false then
 
   local function add_catalyst(recipe, ingredient, amount, losschance, scrap, scrap_amount)
     rm.AddIngredient(recipe, ingredient, amount)
-    rm.AddProductRaw(recipe, {type="item", name=ingredient, amount=amount, probability=1.0 - losschance, ignored_by_productivity=amount, ignored_by_stats=amount})
+    rm.AddProductRaw(recipe, {type="item", name=ingredient, amount=amount, independent_probability=1.0 - losschance, ignored_by_productivity=amount, ignored_by_stats=amount})
     if scrap then
-      rm.AddProductRaw(recipe, {type="item", name=scrap, amount=scrap_amount, probability=losschance})
+      rm.AddProductRaw(recipe, {type="item", name=scrap, amount=scrap_amount, independent_probability=losschance})
     end
   end
 
