@@ -353,7 +353,7 @@ if not mods["galdocs-manufacturing"] then
     if mods["space-exploration"] then
       rm.ReplaceIngredient("iron-gear-wheel", "iron-plate", "brass-plate", 1)
     else
-      rm.ReplaceIngredient("iron-gear-wheel", "iron-plate", "brass-plate", 4)
+      rm.ReplaceIngredient("iron-gear-wheel", "iron-plate", "brass-plate", 1)
     end
   else
     rm.ReplaceIngredient("iron-gear-wheel", "iron-plate", "brass-plate", 1)
