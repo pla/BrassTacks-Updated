@@ -36,7 +36,7 @@ if not mods["galdocs-manufacturing"] then
           type = "recipe",
           name = "brass-plate-foundry",
           localised_name = { "item-name.brass-plate" },
-          category = parts.foundryEnabled and "founding" or "smelting",
+          categories = parts.foundryEnabled and {"founding"} or {"smelting"},
           enabled = false,
           energy_required = 1.6 * yield,
           ingredients = {{type="item", name="copper-plate", amount=yield}, {type="item", name="zinc-plate", amount=yield}},
@@ -287,7 +287,7 @@ if settings.startup["brasstacks-experimental-intermediates"].value then
       {
         type = "recipe",
         name = "galvanized-steel-plate",
-        category = parts.foundryEnabled and "founding" or "advanced-crafting",
+        categories = parts.foundryEnabled and {"founding"} or {"advanced-crafting"},
         energy_required = parts.foundryEnabled and 6.4 or 3,
         ingredients = {{type="item", name="steel-plate", amount=1}, {type="item", name="zinc-plate", amount=1}},
         results = {{type="item", name="galvanized-steel-plate", amount=1}},
