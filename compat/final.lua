@@ -27,7 +27,7 @@ if mods["Krastorio2"] then
   end
 
   if rm.CheckIngredient("chemical-science-pack", "sulfuric-acid") then
-    data.raw.recipe["chemical-science-pack"].category = data.raw.recipe["logistic-science-pack"].category
+    data.raw.recipe["chemical-science-pack"].categories = {data.raw.recipe["logistic-science-pack"].category}
     rm.RemoveIngredient("chemical-science-pack", "sulfuric-acid", 999)
     rm.ReplaceIngredient("chemical-science-pack", mods["Krastorio2"] and "kr-glass" or "glass", "battery", 5)
   end
